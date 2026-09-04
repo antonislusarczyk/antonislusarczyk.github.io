@@ -68,13 +68,47 @@
                 color: inherit;
                 word-break: break-word;
             }
+
+            /* Pasek nawigacji - białe tło, tekst w kolorze #14172A (działa też po rozwinięciu menu na telefonie) */
+            #mainNav,
+            #mainNav .navbar-collapse {
+                background-color: #ffffff !important;
+            }
+            #mainNav .navbar-brand,
+            #mainNav .nav-link {
+                color: #14172A !important;
+            }
+            #mainNav .nav-link:hover,
+            #mainNav .nav-link:focus,
+            #mainNav .navbar-brand:hover {
+                color: #14172A !important;
+                opacity: 0.75;
+            }
+            #mainNav .navbar-toggler {
+                color: #14172A !important;
+                border-color: #14172A !important;
+            }
+            #mainNav .navbar-toggler i.fa-bars {
+                color: #14172A !important;
+            }
+
+            /* Logo obok napisu "Skauci Europy" */
+            #mainNav .navbar-brand {
+                display: flex;
+                align-items: center;
+            }
+            #mainNav .navbar-brand img {
+                height: 40px;
+                width: auto;
+                margin-right: 0.6rem;
+            }
         </style>
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Skauci Europy</a>
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo-skauci-europy.png" alt="Logo Skauci Europy" />Skauci Europy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -97,7 +131,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading text-center">
                             <h1>Kontakt</h1>
-                            <span class="subheading"></span>
+                            <span class="subheading">Masz pytania? Skontaktuj się z nami.</span>
                         </div>
                     </div>
                 </div>
@@ -120,7 +154,7 @@
                                 <i class="fas fa-campground contact-icon"></i>
                                 <h2 class="section-heading">Gromada</h2>
                                 <span class="age-range">9-11 lat</span>
-                                <p><strong>Opiekun:</strong> Kacper Szustak</p>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
                                 <p><strong>Telefon:</strong> <a href="tel:+48536335032">+48 536 335 032</a></p>
                                 <p><strong>E-mail:</strong> <a href="mailto:gromada@przyklad.pl">gromada@przyklad.pl</a></p>
                             </div>
@@ -131,21 +165,20 @@
                                 <i class="fas fa-shield-halved contact-icon"></i>
                                 <h2 class="section-heading">Drużyna</h2>
                                 <span class="age-range">12-17 lat</span>
-                                <p><strong>Opiekun:</strong> Bernard Kicior</p>
-                                <p><strong>Telefon:</strong> <a href="tel:+48733705833">+48 733 705 833</a></p>
-                                <p><strong>E-mail:</strong> <a href="mailto:bernard.kicior@skauci-europy.pl">bernard.kicior@skauci-europy.pl</a></p>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
+                                <p><strong>Telefon:</strong> <a href="tel:+48000000000">[numer telefonu]</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:druzyna@przyklad.pl">druzyna@przyklad.pl</a></p>
                             </div>
                         </div>
                         <!-- Kontakt - Krąg wędrowników -->
                         <div class="col">
                             <div class="contact-card">
                                 <i class="fas fa-compass contact-icon"></i>
-                                <h2 class="section-heading">Krąg wędrowników/szefów</h2>
+                                <h2 class="section-heading">Krąg wędrowników</h2>
                                 <span class="age-range">17+ lat</span>
-                                <p>również chęć założenia jednostki FSE w swojej miejscowości</p>
-                                <p><strong>Opiekun:</strong> Hufcowy Krzysztof Marchewka</p>
-                                <p><strong>Telefon:</strong> <a href="tel:+48577588003">+48 577 588 003</a></p>
-                                <p><strong>E-mail:</strong> <a href="mailto:krzysztof.marchewka@skauci-europy.pl">krzysztof.marchewka@skauci-europy.pl</a></p>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
+                                <p><strong>Telefon:</strong> <a href="tel:+48000000000">[numer telefonu]</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:kregwedrownikow@przyklad.pl">kregwedrownikow@przyklad.pl</a></p>
                             </div>
                         </div>
                     </div>
