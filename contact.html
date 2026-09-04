@@ -15,27 +15,58 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
+            /* Nagłówek bez dużego zdjęcia w tle - zwykły, jednolity pasek */
+            .masthead-simple {
+                background-color: #212529;
+                padding: 6rem 0 4rem;
+            }
+            .masthead-simple .page-heading h1 {
+                color: #fff;
+            }
+            .masthead-simple .page-heading .subheading {
+                color: #f8f5f0;
+            }
+
+            /* Kontener na kafelki - szerszy niż reszta treści, żeby kafelki miały więcej miejsca */
+            .contact-cards-wrap {
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+
             /* Style dla kart kontaktowych, spójne z resztą motywu */
             .contact-card {
                 background-color: #f8f5f0;
                 border-radius: 0.25rem;
-                padding: 2.5rem 2rem;
+                padding: 2rem 1.5rem;
                 height: 100%;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             .contact-card i.contact-icon {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
+                font-size: 2.25rem;
+                margin-bottom: 0.75rem;
                 color: #212529;
             }
             .contact-card h2 {
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.25rem;
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+            .contact-card .age-range {
+                display: block;
+                margin-bottom: 1.25rem;
+                font-style: italic;
+                color: #6c757d;
             }
             .contact-card p {
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.4rem;
+                width: 100%;
             }
             .contact-card a {
                 color: inherit;
+                word-break: break-word;
             }
         </style>
     </head>
@@ -59,12 +90,12 @@
                 </div>
             </div>
         </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/contact-bg.jpg')">
+        <!-- Page Header (bez dużego zdjęcia w tle)-->
+        <header class="masthead-simple">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="page-heading">
+                        <div class="page-heading text-center">
                             <h1>Kontakt</h1>
                             <span class="subheading">Masz pytania? Skontaktuj się z nami.</span>
                         </div>
@@ -75,30 +106,45 @@
         <!-- Main Content-->
         <main class="mb-4">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p class="text-center">Chcesz dołączyć albo dowiedzieć się więcej? Wybierz właściwą jednostkę i skontaktuj się bezpośrednio z jej opiekunem.</p>
+                    </div>
+                </div>
 
-                        <div class="row gx-4 gx-lg-5 my-5">
-                            <!-- Kontakt - Gromada -->
-                            <div class="col-md-6 mb-4 mb-md-0">
-                                <div class="contact-card">
-                                    <i class="fas fa-campground contact-icon"></i>
-                                    <h2 class="section-heading">Gromada</h2>
-                                    <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
-                                    <p><strong>Telefon:</strong> <a href="tel:+48536335032">+48 536 335 032</a></p>
-                                    <p><strong>E-mail:</strong> <a href="mailto:gromada@przyklad.pl">gromada@przyklad.pl</a></p>
-                                </div>
+                <div class="contact-cards-wrap my-5">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                        <!-- Kontakt - Gromada -->
+                        <div class="col">
+                            <div class="contact-card">
+                                <i class="fas fa-campground contact-icon"></i>
+                                <h2 class="section-heading">Gromada</h2>
+                                <span class="age-range">9-11 lat</span>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
+                                <p><strong>Telefon:</strong> <a href="tel:+48536335032">+48 536 335 032</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:gromada@przyklad.pl">gromada@przyklad.pl</a></p>
                             </div>
-                            <!-- Kontakt - Drużyna -->
-                            <div class="col-md-6">
-                                <div class="contact-card">
-                                    <i class="fas fa-shield-halved contact-icon"></i>
-                                    <h2 class="section-heading">Drużyna</h2>
-                                    <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
-                                    <p><strong>Telefon:</strong> <a href="tel:+48000000000">[numer telefonu]</a></p>
-                                    <p><strong>E-mail:</strong> <a href="mailto:druzyna@przyklad.pl">druzyna@przyklad.pl</a></p>
-                                </div>
+                        </div>
+                        <!-- Kontakt - Drużyna -->
+                        <div class="col">
+                            <div class="contact-card">
+                                <i class="fas fa-shield-halved contact-icon"></i>
+                                <h2 class="section-heading">Drużyna</h2>
+                                <span class="age-range">12-17 lat</span>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
+                                <p><strong>Telefon:</strong> <a href="tel:+48000000000">[numer telefonu]</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:druzyna@przyklad.pl">druzyna@przyklad.pl</a></p>
+                            </div>
+                        </div>
+                        <!-- Kontakt - Krąg wędrowników -->
+                        <div class="col">
+                            <div class="contact-card">
+                                <i class="fas fa-compass contact-icon"></i>
+                                <h2 class="section-heading">Krąg wędrowników</h2>
+                                <span class="age-range">17+ lat</span>
+                                <p><strong>Opiekun:</strong> [imię i nazwisko]</p>
+                                <p><strong>Telefon:</strong> <a href="tel:+48000000000">[numer telefonu]</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:kregwedrownikow@przyklad.pl">kregwedrownikow@przyklad.pl</a></p>
                             </div>
                         </div>
                     </div>
