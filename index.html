@@ -48,6 +48,48 @@
                 width: auto;
                 margin-right: 0.6rem;
             }
+
+            /* Nagłówek strony - napis w 1 linii na komputerze, może się zawinąć na telefonie */
+            header.masthead .site-heading h1 {
+                white-space: nowrap !important;
+                font-size: clamp(1.75rem, 4vw, 3.5rem);
+            }
+            header.masthead .site-heading .subheading {
+                font-size: 1.35rem;
+            }
+            @media (max-width: 767px) {
+                header.masthead .site-heading h1 {
+                    white-space: normal !important;
+                }
+            }
+
+            /* Powiększony pasek nagłówka ze zdjęciem (ok. 30% wyższy) */
+            header.masthead {
+                padding-top: 13rem !important;
+                padding-bottom: 13rem !important;
+            }
+            @media (min-width: 768px) {
+                header.masthead {
+                    padding-top: 15.5rem !important;
+                    padding-bottom: 15.5rem !important;
+                }
+            }
+
+            /* Stopka - tło #14172A, tekst #436b8c */
+            footer.border-top {
+                background-color: #14172A;
+                border-top: none !important;
+            }
+            footer.border-top .text-muted {
+                color: #436b8c !important;
+            }
+            footer.border-top a {
+                color: #436b8c;
+            }
+            footer.border-top a:hover {
+                color: #436b8c;
+                opacity: 0.8;
+            }
         </style>
     </head>
     <body>
@@ -92,7 +134,7 @@
                     <div class="post-preview">
                         <a href="post.html">
                             <h2 class="post-title">Poznaj gromadę wilczków</h2>
-                            <h3 class="post-subtitle">dzieci w wieku 9-11 lat</h3>
+                            <h3 class="post-subtitle">Dla dzieci w wieku 9-11 lat</h3>
                         </a>
                         <p class="post-meta">
                             Kim jesteśmy? Co robimy? Jak do nas dołączyć?
@@ -104,7 +146,7 @@
                     <div class="post-preview">
                         <a href="post2.html">
                             <h2 class="post-title">Poznaj drużynę</h2>
-                            <h3 class="post-subtitle">dzieci w wieku 12-17 lat</h3>
+                            <h3 class="post-subtitle">Dla dzieci w wieku 12-17 lat</h3>
                         </a>
                         <p class="post-meta">
                             Kim jesteśmy? Co robimy? Jak do nas dołączyć?
@@ -134,8 +176,10 @@
                             </li>
 
                         </ul>
+                        <div class="small text-center text-muted fst-italic">Gromada: 536 335 032 | kacper.szustak@skauci-europy.pl</div>
+                        <div class="small text-center text-muted fst-italic">Drużyna: 733 705 833 | bernard.kicior@skauci-europy.pl</div>
+                        <div class="small text-center text-muted fst-italic">Szczep Skarżyski: 503 134 769 | piotr.szustak@skauci-europy.pl</div>
                         <div class="small text-center text-muted fst-italic">Copyright &copy; 3 Szczep Skarżyski 2026</div>
-                        <div class="small text-center text-muted fst-italic">ADRES | 536 335 032 | kacper.szustak@skauci-europy.pl</div>
                     </div>
                 </div>
             </div>
